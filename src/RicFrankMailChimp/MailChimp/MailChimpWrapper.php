@@ -18,11 +18,13 @@ class MailChimpWrapper
 
     public function subscribeUser($userData, $listId)
     {
-        $this->api->listSubscribe($listId, $userData['EMAIL'], $userData, 'html', false);
+        $retVal = $this->api->listSubscribe($listId, $userData['EMAIL'], $userData, 'html', false);
 
         if ($this->api->errorCode) {
             throw new \Exception('Error Code: ' . $this->api->errorCode . ' Message: ' . $this->api->errorMessage);
         }
+        
+        return $retVal;
     }
 
     public function unsubscribeUser($email, $listId)
