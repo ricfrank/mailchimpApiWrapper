@@ -1,0 +1,20 @@
+{
+    "name": "ricfrank/mailchimpApiWrapper",
+    "minimum-stability": "dev",
+    "description": "This is a simple Wrapper to MCAPI http://apidocs.mailchimp.com/",
+    "authors": [
+    {
+        "name": "Riccardo Franconi",
+        "email": "riccardo.franconi@gmail.com"
+    }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "ricfrank/php-mailchimp-api": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        }
+    }
+}
