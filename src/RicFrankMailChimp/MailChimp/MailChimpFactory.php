@@ -12,7 +12,7 @@ use Ricfrank\MailChimp\MCAPI;
 class MailChimpFactory
 {
 
-    const APIKEY = '60719856b4cb27a58f5970efccbccaee-us6';
+    const APIKEY = 'INSERT_HERE_MAILCHIMP_API_KEY';
 
     public static function getInstance()
     {
@@ -21,7 +21,7 @@ class MailChimpFactory
 
     public static function getListId()
     {
-        return '59d091deed';
+        return 'INSERT_HERE_MAILCHIMP_LIST_ID';
     }
 
 }

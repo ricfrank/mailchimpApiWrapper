@@ -11,10 +11,10 @@ class MailChimpWrapperTest extends \PHPUnit_Framework_TestCase
     {
         $userData = array('FNAME' => 'Roberto',
             'LNAME' => 'Baggio',
-            'EMAIL' => 'butchermind@gmail.com');
-        $listId = '59d091deed';
+            'EMAIL' => 'xxxx@example.com');
+        $listId = 'INSERT_HERE_MAILCHIMP_LIST_ID';
         
-        $mailChimp = $this->getMock('Ricfrank\MailChimp\MCAPI', array(), array('60719856b4cb27a58f5970efccbccaee'));
+        $mailChimp = $this->getMock('Ricfrank\MailChimp\MCAPI', array(), array('INSERT_HERE_MAILCHIMP_API_KEY'));
         $mailChimp->expects($this->once())
                 ->method('listSubscribe')
                 ->with('59d091deed', 'butchermind@gmail.com')
