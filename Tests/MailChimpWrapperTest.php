@@ -12,12 +12,12 @@ class MailChimpWrapperTest extends \PHPUnit_Framework_TestCase
         $userData = array('FNAME' => 'Roberto',
             'LNAME' => 'Baggio',
             'EMAIL' => 'xxxx@example.com');
-        $listId = 'INSERT_HERE_MAILCHIMP_LIST_ID';
+        $listId = 'FAKE_LIST_ID';
         
-        $mailChimp = $this->getMock('Ricfrank\MailChimp\MCAPI', array(), array('INSERT_HERE_MAILCHIMP_API_KEY'));
+        $mailChimp = $this->getMock('Ricfrank\MailChimp\MCAPI', array(), array('FAKE_API_KEY'));
         $mailChimp->expects($this->once())
                 ->method('listSubscribe')
-                ->with('59d091deed', 'butchermind@gmail.com')
+                ->with('FAKE_LIST_ID', 'xxxx@example.com')
                 ->will($this->returnValue(true));
         
         $mailChimpWrapper = new MailChimpWrapper($mailChimp);

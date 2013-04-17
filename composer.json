@@ -10,7 +10,8 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "ricfrank/php-mailchimp-api": "dev-master"
+        "ricfrank/php-mailchimp-api": "dev-master",
+        "symfony/yaml": "v2.2.1"
     },
     "autoload": {
         "psr-0": {

@@ -1,0 +1,4 @@
+parameters:
+    apikey: your_apikey
+    listid: your_listid
+        

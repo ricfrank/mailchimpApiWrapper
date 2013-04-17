@@ -4,6 +4,7 @@ namespace RicFrankMailChimp\MailChimp;
 
 use Ricfrank\MailChimp\MCAPI;
 
+
 /**
  * Factory to build MCAPI object
  *
@@ -11,17 +12,13 @@ use Ricfrank\MailChimp\MCAPI;
  */
 class MailChimpFactory
 {
-
-    const APIKEY = 'INSERT_HERE_MAILCHIMP_API_KEY';
-
-    public static function getInstance()
+    public static function getInstance($configuration)
     {
-        return new MCAPI(self::APIKEY);
+        return new MCAPI($configuration['parameters']['apikey']);
     }
 
-    public static function getListId()
+    public static function getListId($configuration)
     {
-        return 'INSERT_HERE_MAILCHIMP_LIST_ID';
+        return $configuration['parameters']['listid'];
     }
-
 }
