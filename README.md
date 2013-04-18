@@ -6,6 +6,8 @@ A PHP wrapper to use MailChimp APIs (actually only list management)
 
 How to use
 ===================
+0- php composer.phar install
+
 
 1- Insert mailchimp api key and list id in config/config.yml
 
